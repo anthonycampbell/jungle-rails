@@ -13,7 +13,7 @@
         <span><%= humanized_money_with_symbol @product.price %></span>
       </div>
       <div class="price">       
-        <% if @product.quantity == 0 %>
+        <% if @product.sold_out? %>
           <button class="btn soldout">
             Sold Out
           </button>
