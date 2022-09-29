@@ -10,10 +10,10 @@
       <p><%= i[:item].name %></p>
       <img src=<%= i[:item].image  %> style="width: 200px" /> 
       <p><%= i[:item].description %></p>
-      <p><%= i[:quantity] %></p>
-      <p><%= i[:item].price * i[:quantity] %></p>
+      <p>Quantity: <%= i[:quantity] %></p>
+      <p>Line Item Total: $<%= i[:item].price * i[:quantity] %></p>
     <% end %>
-    <%= @total %>
+    <p>Grand Total: $<%= @total %></p>
     <p><%= @order.email %> </p>
   </div>
 
